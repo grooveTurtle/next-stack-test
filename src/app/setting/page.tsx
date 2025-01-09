@@ -98,6 +98,7 @@ export default function Page() {
       setEventList((prevList) =>
         prevList.filter((item) => item.key !== skill.key)
       );
+      // 알림!
       console.log(`${skill.name}이 종료 되었습니다`);
     }, cooltimeDuration);
 
@@ -106,11 +107,16 @@ export default function Page() {
   };
 
   return (
-    <div>
+    //     <body class="bg-gray-100 h-screen flex items-center justify-center">
+    //   <!-- 중앙 정렬된 레이어 -->
+    //   <div class="bg-white shadow-lg rounded-lg p-8 w-96">
+    //     <h1 class="text-2xl font-semibold text-gray-800 mb-4">Centered Layer</h1>
+    //     <p class="text-gray-600 mb-6">This is a simple layer centered on the screen. You can add more content here.</p>
+    //     <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Click Me</button>
+    //   </div>
+    // </body>
+    <div className="bg-gray-100 h-screen max-w-2xl mx-auto p-8 shadow-lg">
       <h1>Key Press Handler</h1>
-      <p>Press key and then Enter to trigger a specific process.</p>
-      <p>Current State: {isKeyPressed ? "Waiting for Enter" : "Idle"}</p>
-
       <div>
         <h2>Key Binding List</h2>
         <ul className="flex gap-3">
@@ -118,7 +124,7 @@ export default function Page() {
             <li key={data.key}>
               <div className="flex gap-3">
                 {/* <h3>{data.name}</h3> */}
-                <div className="w-32 h-32 relative">
+                <div className="w-16 h-16 relative">
                   <img
                     className="w-full h-full object-cover brightness-80"
                     src={data.image}
@@ -141,6 +147,10 @@ export default function Page() {
             </li>
           ))}
         </ul>
+      </div>
+      <div>
+        <p>Press key and then Enter to trigger a specific process.</p>
+        <p>Current State: {isKeyPressed ? "Waiting for Enter" : "Idle"}</p>
       </div>
     </div>
   );
