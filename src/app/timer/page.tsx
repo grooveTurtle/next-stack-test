@@ -27,8 +27,6 @@ export default function Page() {
         (data) => String(data.key) === event.key
       );
 
-      console.log("currentKey", currentKey);
-
       if (!isKeyPressed) {
         // 키 유효성 검증
         if (currentKey) {
