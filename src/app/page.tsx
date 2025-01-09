@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import Test from '@';
-
 export default function Home() {
   return (
     <>

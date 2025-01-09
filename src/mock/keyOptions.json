@@ -1,0 +1,20 @@
+[
+  {
+    "key": "1",
+    "name": "헬파이어",
+    "target": true,
+    "cooltime": 5
+  },
+  {
+    "key": "4",
+    "name": "무장",
+    "target": true,
+    "cooltime": 5
+  },
+  {
+    "key": "5",
+    "name": "보호",
+    "target": true,
+    "cooltime": 5
+  }
+]
